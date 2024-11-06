@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2024 at 12:05 PM
+-- Generation Time: Nov 06, 2024 at 02:59 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -151,7 +151,6 @@ INSERT INTO `orders` (`oid`, `uid`, `pid`, `quantity`, `sid`, `availability`) VA
 CREATE TABLE `product` (
   `pid` int(11) NOT NULL,
   `prod_name` varchar(255) DEFAULT NULL,
-  `price` decimal(10,2) DEFAULT NULL,
   `p_image` varchar(255) DEFAULT NULL,
   `sid` int(11) DEFAULT NULL,
   `prod_category` varchar(255) DEFAULT NULL
@@ -161,26 +160,26 @@ CREATE TABLE `product` (
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`pid`, `prod_name`, `price`, `p_image`, `sid`, `prod_category`) VALUES
-(1, 'Merced Glider, Performance Heathered Basketweave, Alabaster', 65000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal1.jpg', 7, 'Chair'),
-(2, 'Flash Furniture Modern Dark Natural Accent Chair in Brown', 90099.99, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal2.jpg', NULL, 'Chair'),
-(3, '360° Swivel Makeup Home Office Chair, PU Leather Vanity Chair Upholstered Chair with Black Metal Legs - Grey', 65000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal3.jpg', NULL, 'Chair'),
-(4, 'Becall Tall Dining Chair, Lt Green, Furniture', 50000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal4.jpg', NULL, 'Chair'),
-(8, 'Syosset Modern Faux Leather 3 Seater Sofa with Pillows, Dark Brown and Silver', 80000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Finalsofa1.png', NULL, 'Sofa'),
-(9, 'Bagan Mid-Century Modern Upholstered 3 Seater Sofa, Navy Blue + Dark Walnut', 90000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalSofa2.jpg', NULL, 'Sofa'),
-(10, 'Julian Velvet Upholstered Loveseat, Gray, Chrome Base', 100000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalSofa3.jpg', NULL, 'Sofa'),
-(11, 'Knox 84\" Modern Farmhouse Sofa, Deep Brown Performance Velvet', 120000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalSofa4.jpg', NULL, 'Sofa'),
-(12, 'Vince Multifunctional Extendable White Console Table, Large Size Dining Table - The Pop Home', 140000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable1.jpg', NULL, 'Table'),
-(13, 'Mid Century Modern Farmhouse Ash Wood Rectangular Dining Table for 6 with Geometric Design Table Legs', 150000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable2.jpg', NULL, 'Table'),
-(14, 'PCS Dining Table Set, Rectangular Dining Table with Trestle Table Base and 4 Upholstered Chairs-ModernLuxe', 180000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable3.jpg', NULL, 'Table'),
-(15, 'Hokku Designs Kanya Round Wood in Brown | 33.46 H x 51.18 W x 51.18 D in | Way-fair', 200000.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable4.jpg', NULL, 'Table'),
-(20, ' Arghakhachi Cement', 640.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/arghakhanchi-opc-cement-2.jpg', 5, 'Cement'),
-(21, 'Brij Cement', 770.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Brij Cement.png', 5, 'Cement'),
-(22, ' Ambe Cement', 680.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Ambe Cement.jpeg', 5, 'Cement'),
-(23, 'Agni Cement', 830.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Agni Cement.png', 5, 'Cement'),
-(25, 'Brick Bhaktapur 1 No [ NT ] ', 16.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/19491-brick-bhaktapur-1-no-nt-19491-1646891248-54705587.jpg', 5, 'Bricks'),
-(26, 'HT Brick No. 1', 17.50, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/HT bricks.jpg', 5, 'Bricks'),
-(27, 'Mamta Clay Red Brick', 7.00, '/xampp/htdocs/GHAR_1/product_fetch/Productimage/mnamata .png', NULL, 'Bricks');
+INSERT INTO `product` (`pid`, `prod_name`, `p_image`, `sid`, `prod_category`) VALUES
+(1, 'Merced Glider, Performance Heathered Basketweave, Alabaster', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal1.jpg', 7, 'Chair'),
+(2, 'Flash Furniture Modern Dark Natural Accent Chair in Brown', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal2.jpg', NULL, 'Chair'),
+(3, '360° Swivel Makeup Home Office Chair, PU Leather Vanity Chair Upholstered Chair with Black Metal Legs - Grey', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal3.jpg', NULL, 'Chair'),
+(4, 'Becall Tall Dining Chair, Lt Green, Furniture', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/ChairFinal4.jpg', NULL, 'Chair'),
+(8, 'Syosset Modern Faux Leather 3 Seater Sofa with Pillows, Dark Brown and Silver', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Finalsofa1.png', NULL, 'Sofa'),
+(9, 'Bagan Mid-Century Modern Upholstered 3 Seater Sofa, Navy Blue + Dark Walnut', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalSofa2.jpg', NULL, 'Sofa'),
+(10, 'Julian Velvet Upholstered Loveseat, Gray, Chrome Base', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalSofa3.jpg', NULL, 'Sofa'),
+(11, 'Knox 84\" Modern Farmhouse Sofa, Deep Brown Performance Velvet', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalSofa4.jpg', NULL, 'Sofa'),
+(12, 'Vince Multifunctional Extendable White Console Table, Large Size Dining Table - The Pop Home', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable1.jpg', NULL, 'Table'),
+(13, 'Mid Century Modern Farmhouse Ash Wood Rectangular Dining Table for 6 with Geometric Design Table Legs', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable2.jpg', NULL, 'Table'),
+(14, 'PCS Dining Table Set, Rectangular Dining Table with Trestle Table Base and 4 Upholstered Chairs-ModernLuxe', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable3.jpg', NULL, 'Table'),
+(15, 'Hokku Designs Kanya Round Wood in Brown | 33.46 H x 51.18 W x 51.18 D in | Way-fair', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/FinalTable4.jpg', NULL, 'Table'),
+(20, ' Arghakhachi Cement', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/arghakhanchi-opc-cement-2.jpg', 5, 'Cement'),
+(21, 'Brij Cement', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Brij Cement.png', 5, 'Cement'),
+(22, ' Ambe Cement', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Ambe Cement.jpeg', 5, 'Cement'),
+(23, 'Agni Cement', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/Agni Cement.png', 5, 'Cement'),
+(25, 'Brick Bhaktapur 1 No [ NT ] ', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/19491-brick-bhaktapur-1-no-nt-19491-1646891248-54705587.jpg', 5, 'Bricks'),
+(26, 'HT Brick No. 1', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/HT bricks.jpg', 5, 'Bricks'),
+(27, 'Mamta Clay Red Brick', '/xampp/htdocs/GHAR_1/product_fetch/Productimage/mnamata .png', NULL, 'Bricks');
 
 -- --------------------------------------------------------
 
